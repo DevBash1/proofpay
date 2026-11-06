@@ -1,0 +1,26 @@
+{
+  "name": "proofpay-services",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --import tsx --test src/verifier/verifier.test.ts",
+    "typecheck": "tsc --noEmit",
+    "setup:testnet": "tsx src/setup-testnet.ts",
+    "demo:offline": "tsx src/demo-offline.ts",
+    "serve:deliverables": "tsx src/deliverables-server.ts",
+    "verifier": "tsx --env-file=.env src/verifier/main.ts",
+    "client:create": "tsx --env-file=.env src/live/client-create.ts",
+    "freelancer:submit": "tsx --env-file=.env src/live/freelancer-submit.ts",
+    "demo:live": "tsx --env-file=.env src/live/demo-live.ts"
+  },
+  "dependencies": {
+    "near-api-js": "^7.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

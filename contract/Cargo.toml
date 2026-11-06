@@ -1,0 +1,16 @@
+[package]
+name = "proofpay-escrow"
+version = "0.1.0"
+edition = "2021"
+description = "Escrow for freelance work on NEAR: fund in a stablecoin, verify the delivery, pay out in splits."
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+near-sdk = "5"
+near-contract-standards = "5"
+
+[dev-dependencies]
+near-sdk = { version = "5", features = ["unit-testing"] }
